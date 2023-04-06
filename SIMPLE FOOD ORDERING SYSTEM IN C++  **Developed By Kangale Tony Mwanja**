@@ -1,0 +1,154 @@
+#include<iostream.h>
+#include<conio.h>
+//using namespace std;
+int main()
+{
+	char name[30], pizza1[]="Chicken Fazita" ,pizza2[]="Chicken Bar BQ" ,pizza3[]="Peri Peri" ,pizza4[]="Creamy Max", roll1[]="Chicken Chatni Roll", roll2[]="Chicken Mayo Roll", roll3[]="Veg Roll With Fries",bur1[]="Zinger Burger",bur2[]="Chicken Burger",bur3[]="Beef Burger";
+	char sand1[]="Club Sandwich", sand2[]="Chicken Crispy Sandwich", sand3[]="Extream Veg Sandwich";
+	char bir1[]="Chicken Biryani", bir2[]="Prawn Biryani", bir3[]="Beef Biryani",gotostart ;
+	int choice=0,pchoice,pchoice1, quantity;// time=70;
+	beginning:
+	system("CLS");
+	cout<<"\t\t\t----------Kangale's Tony. Fast Food-----------\n\n";
+	cout<<"Please Enter Your Name: ";
+	cin.getline(name, 20);
+	cout<<"Hello "<<name<<"\n\nWhat would you like to order?\n\n";
+
+	cout<<"\t\t\t\t--------Menu--------\n\n";
+
+	cout<<"1) Pizzas\n";
+	cout<<"2) Burgers\n";
+	if(choice==1)
+	 {
+		cout<<"\n1) "<<pizza1<<"\n";
+		cout<<"2) "<<pizza2<<"\n";
+		cout<<"3) "<<pizza3<<"\n";
+		cout<<"4) "<<pizza4<<"\n";
+		cout<<"\nPlease Enter which Flavour would you like to have?:";
+		cin>>pchoice;
+		if(pchoice>=1 && pchoice<=2)
+		{
+			cout<<"\n1) Small Ksh.150\n"<<"2) Regular Ksh.300\n"<<"2) Large Ksh.600\n";
+			cout<<"\nChoose Size Please:";
+			cin>>pchoice1;
+			if(pchoice1>=1 && pchoice1<=2)
+			cout<<"\nPlease Enter Quantity: ";
+			cin>>quantity;
+			switch(pchoice1)
+			{
+			case 1: choice = 150*quantity;
+			break;
+
+			case 2: choice = 300*quantity;
+			break;
+
+			case 3: choice = 600*quantity;
+			break;
+
+
+			      }
+			system("CLS");
+			switch (pchoice1)
+			{
+			 case 1:
+			 cout<<"\t\t\t--------Your Order---------\n";
+			 cout<<""<<quantity<<" "<<pizza1;
+			 cout<<"\nYour Total Bill is"<<choice<<"\nYour Order Will be delivered in 70 Minutes";
+			 cout<<"\n\nThank you For Ordering From Kangale's Tony. Fast Food\n";
+			 break;
+			 case 2:
+			 cout<<"\t\t--------Your Order---------\n";
+			 cout<<""<<quantity<<"  "<<pizza2;
+			 cout<<"\nYour Total Bill is "<<choice<<"\nYour Order Will be delivered in 70 Minutes";
+			 cout<<"\nThank you For Ordering From Kangale's Tony. Fast Food\n";
+			 break;
+			 case 3:
+			 cout<<"\t\t--------Your Order---------\n";
+			 cout<<""<<quantity<<" "<<pizza3;
+			 cout<<"\nYour Total Bill is"<<choice<<"\nYour Order Will be delivered in 70 Minutes";
+			 cout<<"\nThank you For Ordering From Kangale's Tony. Fast Food\n";
+			 break;
+			 case 4:
+			 cout<<"\t\t--------Your Order---------\n";
+			 cout<<""<<quantity<<" "<<pizza4;
+			 cout<<"\nYour Total Bill is"<<choice<<"\nYour Order Will be delivered in 70 Minutes";
+			 cout<<"\nThank you For Ordering From Kangale's Tony. Fast Food\n";
+			 break;
+
+			}
+			cout<<"Would you like to order anything else? Y / N:";
+			cin>>gotostart;
+			if(gotostart=='Y' || gotostart=='y')
+			{
+			  goto beginning;
+			  //return 0;
+			}
+
+
+
+		}
+
+	 }
+
+
+	 else if(choice==2)
+	 {
+		cout<<"\n1 "<<bur1<<" Ksh.80"<<"\n";
+		cout<<"2 "<<bur2<<" Ksh.100"<<"\n";
+		cout<<"3 "<<bur3<<" Ksh.120"<<"\n";
+		//cout<<"4 "<<pizza4<<"\n";
+		cout<<"\nPlease Enter which Burger you would like to have?: ";
+		cin>>pchoice1;
+		if(pchoice1>=1 && pchoice1<=3)
+		{
+			cout<<"\nPlease Enter Quantity: ";
+			cin>>quantity;
+			switch(pchoice1)
+			{
+			case 1: choice = 80*quantity;
+			break;
+
+			case 2: choice = 100*quantity;
+			break;
+
+			case 3: choice = 120*quantity;
+			break;
+
+			}
+			system("CLS");
+			switch (pchoice1)
+			{
+			 case 1:
+			 cout<<"\t\t--------Your Order---------\n";
+			 cout<<""<<quantity<<" "<<bur1;
+			 cout<<"\nYour Total Bill is"<<choice<<"\nYour Order Will be delivered in 70 Minutes";
+			 cout<<"\nThank you For Ordering From Kangale's Tony. Fast Food \n";
+			 break;
+			 case 2:
+			 cout<<"\t\t--------Your Order---------\n";
+			 cout<<""<<quantity<<"  "<<bur2;
+			 cout<<"\nYour Total Bill is"<<choice<<"\nYour Order Will be delivered in 70 Minutes";
+			 cout<<"\nThank you For Ordering From Kangale's Tony. Pizza\n";
+			 break;
+			 case 3:
+			 cout<<"\t\t--------Your Order---------\n";
+			 cout<<""<<quantity<<" "<<bur3;
+			 cout<<"\nYour Total Bill is"<<choice<<"\nYour Order Will be delivered in 70 Minutes";
+			 cout<<"\nThank you For Ordering From Kangale's Jr. Fast Food\n";
+			 break;
+
+
+			}
+			cout<<"\nWould you like to order anything else? Y / N:";
+			cin>>gotostart;
+			if(gotostart=='Y' || gotostart=='y')
+			{
+			  goto beginning;
+			  //return 0;
+			}
+
+  }
+}
+  
+getch();
+}
